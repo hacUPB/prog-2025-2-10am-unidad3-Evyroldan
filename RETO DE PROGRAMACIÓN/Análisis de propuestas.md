@@ -57,5 +57,29 @@
 |promedio_d |Salida |El promedio diario de maletas cargadas: total_maletas/dias_t. |
 |pago_adicional |Salida |Determina si hay un pago adicional al superar el umbral de las 800 maletas por día. (maletas_dia > 800). |
 
+## Pseudocódigo
+```
+   INICIO
+   DEFINIR diasTrabajados  <- 4 * 6   // 24
+   DEFINIR umbralDiario <- 800
+   DEFINIR montoBonificacion COMO ENTERO <- 50000
+   // Inicializaciones
+   totalMaletas <- 0
+   pagoAdicional <- 0
+   PARA i <- 1 HASTA diasTrabajados HACER
+       LEER maletasDia[i]
+       totalMaletas <- totalMaletas + maletasDia[i]
+       SI maletasDia[i] > umbralDiario ENTONCES
+           pagoAdicional <- montoBonificacion
+           opcional: SALIR DEL BUCLE si solo se necesita saber si existe al menos un día que excede
+       FIN SI
+   FIN PARA
+   promedioDiario <- totalMaletas / diasTrabajados
+   MOSTRAR "Total maletas (4 semanas): ", totalMaletas
+   MOSTRAR "Promedio diario: ", promedioDiario
+   MOSTRAR "Pago adicional: ", pagoAdicional
+FIN
+```
+
 
 
