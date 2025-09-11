@@ -10,14 +10,16 @@
 |PI|float|peso inicial de la aeronave|
 |CC|float|cantidad de combustible|
 |NT|int|el numero de asientos vendidos|
-|D|float|la distancia que recorre el avion|
+|T|float|Tiempo de vuelo que recorre el avion|
+|VT|float|valor del tiquete|
 
 **variables de control**
 |nombre|tipo|comentario|
 |------|----|----------|
-|VT|float|valor del tiquete|
-|PC|float|peso del combustible|
-|P|float|peso|peso a medida que recorre distancia|
+|PC_U|float|peso por unidad de combustible|
+|H|int|hora de vuelo|
+|GH|float|gasto de combustible por hora|
+|P|float|peso|peso total de la aeronave cada hora|
 |VC|float|precio del combustible|
 |VV|float|precio del viaje en base al combustible|
 |ST|float|la suma de los tiquetes vendidos|
@@ -27,6 +29,10 @@
 |------|----|----------|
 |R|float|la rentabilidad o perdida resultante|
 |E|booleana|determina si es viable o no|
+
+## Pseudocódigo
+```
+Inicio
 
 
 
