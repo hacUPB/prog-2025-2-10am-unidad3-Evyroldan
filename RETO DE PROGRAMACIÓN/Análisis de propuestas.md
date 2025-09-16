@@ -1,13 +1,18 @@
 # Análisis propuestas del RETO:
 
+<<<<<<< HEAD
 
 1. **Se consulta el precio de un vuelo de un A380 para una aerolinea, se necesita identificar el gasto del viaje en base a la variacion del peso en el vuelo por gasto de combustible y la distancia que recorre el avión. Para luego hacer una comparación de la venta de tiquetes y los gastos en combustible y confirmar si el vuelo es rentable para la aerolínea o no.**
+=======
+1. **Se consulta el precio de un vuelo para una aerolinea, se necesita identificar el gasto del viaje en base a la variacion del peso en el vuelo por gasto de combustible y la distancia que recorre el avión. Para luego hacer una comparación de la venta de tiquetes y los gastos en combustible y confirmar si el vuelo es rentable para la aerolínea o no.**
+>>>>>>> 04f52bbb678ae5f016fca310553e098f058a547e
 
 ## Análisis
 
 **variables de entrada**
 |nombre|tipo|comentario|
 |--------------------|----|----------|
+|PI|float|peso inicial de la aeronave|
 |CC|float|cantidad de combustible|
 |NT|int|el numero de asientos vendidos|
 |T|float|Tiempo de vuelo que recorre el avion|
@@ -33,6 +38,17 @@
 |P|float|peso|peso total de la aeronave cada hora|
 |ST|float|la suma de los tiquetes vendidos|
 |VV|float|Costo toatl del combustible|
+=======
+**variables de control**
+|nombre|tipo|comentario|
+|------|----|----------|
+|PC_U|float|peso por unidad de combustible|
+|H|int|hora de vuelo|
+|GH|float|gasto de combustible por hora|
+|P|float|peso|peso total de la aeronave cada hora|
+|VC|float|precio del combustible|
+|VV|float|precio del viaje en base al combustible|
+|ST|float|la suma de los tiquetes vendidos|
 
 **variables de salida**
 |nombre|tipo|comentario|
@@ -194,4 +210,9 @@ total_maletas = 0
    Mostrar "Promedio diario: ", promedio_diario
    Mostrar "Pago adicional: ", pago_adicional
 FIN
+<<<<<<< HEAD
 ```
+
+
+
+

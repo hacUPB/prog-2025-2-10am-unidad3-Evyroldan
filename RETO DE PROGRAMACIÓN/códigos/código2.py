@@ -2,7 +2,7 @@
 
 while True:
     # Ingreso de horas de vuelo
-    horas_vuelo = int(input("\nIngrese las horas de vuelo: "))
+    horas_vuelo = int(input("Ingrese las horas de vuelo: "))
 
     # Verificación de mantenimientos según horas de vuelo
     if horas_vuelo >= 600:
@@ -29,7 +29,7 @@ while True:
         print("Todos los sistemas están bien.")
         autorizacion = "AUTORIZADA"
 
-    # Resultado final
+    # Resultado
     print("Estado final de la aeronave:", autorizacion)
 
     # Preguntar si desea continuar con otra aeronave
@@ -37,3 +37,6 @@ while True:
     if continuar != "SI":
         print("Registro de mantenimiento finalizado.")
         break
+
+# aquí se hizo uso de la IA, para hallar la manera de hacer el bucle hasta que el usuario lo decida.
+# Incluyó el While True, if continuar != "SI" y break. Además sugirió el .upper()
