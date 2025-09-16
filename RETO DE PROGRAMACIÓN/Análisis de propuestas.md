@@ -167,6 +167,7 @@ Ingresar horas_vuelo
    Mostrar "Estado final de la aeronave: ", autorización
 Fin
 ```
+*En este pseudocódigo se le solicitó a la IA una corrección para que se expresara correctamente la autorización con restricción del aire*
 
 
 3. **En la aerolínea KLM se desea calcular el promedio de maletas que un operador de rampa carga en 4 semanas. El operador trabaja 6 días a la semana, por lo que en total son 24 días. Cada día se registra la cantidad de maletas cargadas. Si en algún día supera las 800 maletas, recibe un pago adicional de 50.000. Al final, se debe mostrar el total de maletas cargadas, el promedio diario y el pago adicional.**
@@ -221,4 +222,4 @@ Fin
 Fin
 
 ```
-
+* Se le consultó a la IA si ciertas variables propuestas eran necesarias y en base a su respuesta se descartaron unas y se modificaron otras, y además se le pidió una corrección en el control del bucle*

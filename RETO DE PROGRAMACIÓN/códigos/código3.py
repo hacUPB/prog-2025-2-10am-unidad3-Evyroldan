@@ -1,4 +1,4 @@
-dias_trabajados = 4 * 6  
+dias_trabajados = 6  
 umbral_diario = 800
 pago_diario = 60000
 pago_adicional = 50000
