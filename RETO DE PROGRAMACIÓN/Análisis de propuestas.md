@@ -1,11 +1,5 @@
 # Análisis propuestas del RETO:
-
-<<<<<<< HEAD
-
 1. **Se consulta el precio de un vuelo de un A380 para una aerolinea, se necesita identificar el gasto del viaje en base a la variacion del peso en el vuelo por gasto de combustible y la distancia que recorre el avión. Para luego hacer una comparación de la venta de tiquetes y los gastos en combustible y confirmar si el vuelo es rentable para la aerolínea o no.**
-=======
-1. **Se consulta el precio de un vuelo para una aerolinea, se necesita identificar el gasto del viaje en base a la variacion del peso en el vuelo por gasto de combustible y la distancia que recorre el avión. Para luego hacer una comparación de la venta de tiquetes y los gastos en combustible y confirmar si el vuelo es rentable para la aerolínea o no.**
->>>>>>> 04f52bbb678ae5f016fca310553e098f058a547e
 
 ## Análisis
 
@@ -58,69 +52,69 @@
 
 ## Pseudocódigo
 ```
-INICIO
-    DEFINIR GH = 12000        
-    DEFINIR PA = 276800       
-    DEFINIR VC = 0.70         
-    DEFINIR e = VERDADERO
+Inicio
+    GH = 12000        
+    PA = 276800       
+    VC = 0.70         
+    e = VERDADERO
 
-    MIENTRAS e = VERDADERO HACER
-        MOSTRAR "C. Calcular rentabilidad de vuelo"
-        MOSTRAR "S. Salir"
-        LEER O
+    Mientras e = VERDADERO Hacer
+        Mostrar "C. Calcular rentabilidad de vuelo"
+        Mostrar "S. Salir"
+        Leer O
         CONVERTIR O A MAYÚSCULA
 
-        SEGUN O HACER
+        Segun O Hacer
             CASO "C":
                 h ← 0
-                LEER CC (cantidad de combustible en kg, entre 40.000 y 254.000)
-                SI CC ES VÁLIDO ENTONCES
-                    LEER NT (número de tickets vendidos, máximo 853)
-                    SI NT ES VÁLIDO ENTONCES
-                        LEER VT (precio de ticket, entre 400 y 1500)
-                        SI VT ES VÁLIDO ENTONCES
-                            LEER T (duración del vuelo en horas, entre 2 y 16)
-                            SI T ES VÁLIDO ENTONCES
+                Leer CC (cantidad de combustible en kg, entre 40.000 y 254.000)
+                Si CC ES VÁLIDO ENTONCES
+                    Leer NT (número de tickets vendidos, máximo 853)
+                    Si NT ES VÁLIDO ENTONCES
+                        Leer VT (precio de ticket, entre 400 y 1500)
+                        Si VT ES VÁLIDO ENTONCES
+                            Leer T (duración del vuelo en horas, entre 2 y 16)
+                            Si T ES VÁLIDO ENTONCES
                                 ST = NT * VT             
                                 VV = CC * VC              
                                 G = ST - VV               
 
-                                MIENTRAS h < T HACER
+                                Mientras h < T Hacer
                                     CC = CC - GH         
                                     h = h + 1
-                                    SI CC <= 0 ENTONCES
-                                        MOSTRAR "Vuelo inviable, sin combustible en hora", h
+                                    Si CC <= 0 Entonces
+                                        Mostrar "Vuelo inviable, sin combustible en hora", h
                                         MOSTRAR "Pérdida:", G
                                         SALIR DEL BUCLE
-                                    FIN SI
-                                FIN MIENTRAS
+                                    Fin Si
+                                Fin Mientras
 
-                                SI CC > 0 ENTONCES
-                                    SI G < 0 ENTONCES
-                                        MOSTRAR "Vuelo no rentable. Pérdida:", G
-                                    SINO
-                                        MOSTRAR "Vuelo rentable. Ganancia:", G
-                                    FIN SI
-                                FIN SI
-                            SINO
-                                MOSTRAR "Duración no permitida"
-                            FIN SI
-                        SINO
-                            MOSTRAR "Precio no válido"
-                        FIN SI
-                    SINO
-                        MOSTRAR "Número de asientos inválido"
-                    FIN SI
-                SINO
-                    MOSTRAR "Cantidad de combustible no válida"
-                FIN SI
+                                Si CC > 0 Entonces
+                                    Si G < 0 Entonces
+                                        Mostrar "Vuelo no rentable. Pérdida:", G
+                                    Sino
+                                        Mostrar "Vuelo rentable. Ganancia:", G
+                                    Fin si
+                                Fin si
+                            Sino
+                                Mostrar "Duración no permitida"
+                            Fin si
+                        Sino
+                            Mostrar "Precio no válido"
+                        Fin si
+                    Sino
+                        Mostrar "Número de asientos inválido"
+                    Fin si
+                Sino
+                    Mostrar "Cantidad de combustible no válida"
+                Fin si
             CASO "S":
                 e ← FALSO
             CASO OTRO:
-                MOSTRAR "Modo no válido"
-        FIN SEGUN
-    FIN MIENTRAS
-FIN
+                Mostrar "Modo no válido"
+        Fin Segun
+    Fin Mientras
+Fin
     
 
 ```
@@ -144,75 +138,87 @@ FIN
 ```
 Inicio
 Ingresar horas_vuelo 
-   LEER horas_vuelo
-   SI horasVuelo >= 600 ENTONCES
-       MOSTRAR "Debe realizarse chequeo de mantenimiento al sistema hidráulico."
-   FIN SI
-   SI horasVuelo >= 400 ENTONCES
-       MOSTRAR "Debe realizarse chequeo de mantenimiento al sistema eléctrico."
-   FIN SI
-   MOSTRAR "Debe realizarse chequeo de mantenimiento al sistema de aire acondicionado."
-   LEER sistema_H   
-   LEER sistema_E   
-   LEER sistema_A   
-   SI sistema_H = "FALLA" ENTONCES
-       MOSTRAR "Reparación de sistema hidráulico: operación detenida por 2 días."
+   Leer horas_vuelo
+   Si horasVuelo >= 600 Entonces
+       Mostrar "Debe realizarse chequeo de mantenimiento al sistema hidráulico."
+   Fin  Si
+   Si horasVuelo >= 400 Entonces
+       Mostrar "Debe realizarse chequeo de mantenimiento al sistema eléctrico."
+   Fin Si
+   Mostrar "Debe realizarse chequeo de mantenimiento al sistema de aire acondicionado."
+   Leer sistema_H   
+   Leer sistema_E   
+   Leer sistema_A   
+   Si sistema_H = "FALLA" Entonces
+       Mostrar "Reparación de sistema hidráulico: operación detenida por 2 días."
        autorizacionOperacion = "NO AUTORIZADA"
-   SINO
- SI sistema_E = "FALLA" ENTONCES
-       MOSTRAR "Reparación de sistema eléctrico: operación detenida por 3 días."
+   Sino
+ Si sistema_E = "FALLA" Entonces
+       Mostrar "Reparación de sistema eléctrico: operación detenida por 3 días."
        autorización = "NO AUTORIZADA"
-   SINO
- SI sistema_A = "FALLA" ENTONCES
-       MOSTRAR "Falla en sistema de aire acondicionado: operación restringida a 10.000 pies."
+   Sino
+ SI sistema_A = "FALLA" Entonces
+       Mostrar "Falla en sistema de aire acondicionado: operación restringida a 10.000 pies."
        autorización = "AUTORIZADA CON RESTRICCIÓN"
-   SINO
-       MOSTRAR "Todos los sistemas están bien."
+   Sino
+       Mostrar "Todos los sistemas están bien."
        autorización = "AUTORIZADA"
-   FIN SI
-   MOSTRAR "Estado final de la aeronave: ", autorización
-FIN
+   Fin Si
+   Mostrar "Estado final de la aeronave: ", autorización
+Fin
 ```
 
 
 3. **En la aerolínea KLM se desea calcular el promedio de maletas que un operador de rampa carga en 4 semanas. El operador trabaja 6 días a la semana, por lo que en total son 24 días. Cada día se registra la cantidad de maletas cargadas. Si en algún día supera las 800 maletas, recibe un pago adicional de 50.000. Al final, se debe mostrar el total de maletas cargadas, el promedio diario y el pago adicional.**
 
+
 ## Análisis
 
-| Variable | Tipo de Variable | Comentario |
-|----------|------------------|------------|
-|maletas_dia |Entrada |Registro de la cantidad de maletas cargadas en un día. |
-|dias_t |Control |El total de 24 días. |
-|i |Control |Controlador hasta hacerse 24 días. |
-|pago_d |Control | Pago diario fijo que se le hace al trabajador. |
-|total_maletas |Salida |Suma total de maletas_dia. |
-|promedio_d |Salida |El promedio diario de maletas cargadas: total_maletas/dias_t. |
-|pago_adicional |Salida |Determina si hay un pago adicional al superar el umbral de las 800 maletas por día. (maletas_dia > 800). |
+| Variable                         | Tipo de Variable| Comentario                                                         |
+| -------------------------------- | ------------------- | ------------------------------------------------------------------ |
+| maletas_dia| Entrada  | Registro de la cantidad de maletas cargadas en un día.|
+| dias_t| Control  | Número total de días trabajados (24).                              |
+|i| Control | Contador de ciclo para iterar sobre los días.                      |
+| pago_d/ pago_diario| Constante / Control | Pago fijo diario que se le hace al trabajador (60.000).            |
+| total_maletas      | Proceso / Salida    | Acumulador de la suma total de maletas cargadas en todos los días. |
+|promedio_d / promedio_diario | Salida              | Promedio diario de maletas: total_maletas / dias_t |
+|pago_adicional                 | Constante / Proceso | Pago adicional que se aplica cuando maletas_dia > 800(50.000).  |
+| total_pago                   | Salida              | Pago final recibido (suma de pagos diarios + adicionales).         |
+|dias_exceso                   | Salida / Proceso    | Contador de días que superaron el umbral de 800 maletas.           |
 
 ## Pseudocódigo
 ```
-   INICIO
-dias_t = 4 * 6   // 24
-umbraldiario = 800
-pago_adicional = 50000
-pago_d = 60000
-total_maletas = 0
-   Para i = 1 Hasta dias_t Hacer
-       Leer maletas_dia[i]
-       total_Maletas = total_maletas + maletasDia[i]
-       Si maletasDia[i] > umbralDiario Entonces
-           total = pago_d + pago_adicional
-           opcional: SALIR DEL BUCLE si solo se necesita saber si existe al menos un día que excede
-       FIN SI
-   FIN PARA
-   promedio_d = totalMaletas / diasTrabajados
-   Mostrar "Total maletas (4 semanas): ", total_maletas
-   Mostrar "Promedio diario: ", promedio_diario
-   Mostrar "Pago adicional: ", pago_adicional
-FIN
-<<<<<<< HEAD
+ Inicio
+    dias_trabajados = 4 * 6          (24 días)
+    umbral_diario = 800
+    pago_diario = 60000
+    pago_adicional = 50000
+
+    total_maletas = 0
+    total_pago = 0
+    dias_exceso = 0
+    i = 1
+
+    Mientras i <= dias_trabajados Hacer
+        Leer maletas_dia
+        total_maletas = total_maletas + maletas_dia
+        total_pago = total_pago + pago_diario
+
+        Si maletas_dia > umbral_diario Entonces
+            total_pago = total_pago + pago_adicional
+            dias_exceso = dias_exceso + 1
+        Fin Si
+
+        i = i + 1
+    Fin Mientras
+
+    promedio_diario = total_maletas / dias_trabajados
+
+    Mostrar "Total maletas (4 semanas): ", total_maletas
+    Mostrar "Promedio diario: ", promedio_diario
+    Mostrar "Días con exceso (>800): ", dias_exceso
+    Mostrar "Pago total recibido: ", total_pago
+Fin
+
 ```
-
-
-
 
