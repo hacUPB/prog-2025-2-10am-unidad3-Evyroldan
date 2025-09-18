@@ -1,11 +1,6 @@
 # Análisis propuestas del RETO:
-<<<<<<< HEAD
 
 1. **Se consulta el precio de un vuelo de un A380 para una aerolinea, se necesita identificar el gasto del viaje en base a la variacion del peso en el vuelo por gasto de combustible y la distancia que recorre el avión. Para luego hacer una comparación de la venta de tiquetes y los gastos en combustible y confirmar si el vuelo es rentable para la aerolínea o no.**
-
-=======
-1. **Se consulta el precio de un vuelo de un A380 para una aerolinea, se necesita identificar el gasto del viaje en base a la variacion del peso en el vuelo por gasto de combustible y la distancia que recorre el avión. Para luego hacer una comparación de la venta de tiquetes y los gastos en combustible y confirmar si el vuelo es rentable para la aerolínea o no.**
->>>>>>> 84cd4090201caf1a5dc468e8cbac5d0ae6bffa8a
 
 ## Análisis
 
@@ -37,8 +32,8 @@
 |------|----|----------|
 |P|float|peso|peso total de la aeronave cada hora|
 |ST|float|la suma de los tiquetes vendidos|
-|VV|float|Costo toatl del combustible|
-=======
+|VV|float|Costo total del combustible|
+
 **variables de control**
 |nombre|tipo|comentario|
 |------|----|----------|
@@ -181,7 +176,6 @@ Fin
 
 ## Análisis
 
-<<<<<<< HEAD
 | Variable | Tipo de Variable | Comentario |
 |----------|------------------|------------|
 |combustible_e1 |Entrada |Cantidad de combustible inicial de la etapa 1. |
@@ -235,55 +229,5 @@ Fin
 
 ```
 *La IA propuso las variables "etapa" y "minuto" como variables de control convenientes para el código*
+*Se le consultó a la IA si ciertas variables propuestas eran necesarias y en base a su respuesta se descartaron unas y se modificaron otras, y además se le pidió una corrección en el control del bucle*
 
-
-=======
-| Variable                         | Tipo de Variable| Comentario                                                         |
-| -------------------------------- | ------------------- | ------------------------------------------------------------------ |
-| maletas_dia| Entrada  | Registro de la cantidad de maletas cargadas en un día.|
-| dias_t| Control  | Número total de días trabajados (24).                              |
-|i| Control | Contador de ciclo para iterar sobre los días.                      |
-| pago_d/ pago_diario| Constante / Control | Pago fijo diario que se le hace al trabajador (60.000).            |
-| total_maletas      | Proceso / Salida    | Acumulador de la suma total de maletas cargadas en todos los días. |
-|promedio_d / promedio_diario | Salida              | Promedio diario de maletas: total_maletas / dias_t |
-|pago_adicional                 | Constante / Proceso | Pago adicional que se aplica cuando maletas_dia > 800(50.000).  |
-| total_pago                   | Salida              | Pago final recibido (suma de pagos diarios + adicionales).         |
-|dias_exceso                   | Salida / Proceso    | Contador de días que superaron el umbral de 800 maletas.           |
-
-## Pseudocódigo
-```
- Inicio
-    dias_trabajados = 4 * 6          (24 días)
-    umbral_diario = 800
-    pago_diario = 60000
-    pago_adicional = 50000
-
-    total_maletas = 0
-    total_pago = 0
-    dias_exceso = 0
-    i = 1
-
-    Mientras i <= dias_trabajados Hacer
-        Leer maletas_dia
-        total_maletas = total_maletas + maletas_dia
-        total_pago = total_pago + pago_diario
-
-        Si maletas_dia > umbral_diario Entonces
-            total_pago = total_pago + pago_adicional
-            dias_exceso = dias_exceso + 1
-        Fin Si
-
-        i = i + 1
-    Fin Mientras
-
-    promedio_diario = total_maletas / dias_trabajados
-
-    Mostrar "Total maletas (4 semanas): ", total_maletas
-    Mostrar "Promedio diario: ", promedio_diario
-    Mostrar "Días con exceso (>800): ", dias_exceso
-    Mostrar "Pago total recibido: ", total_pago
-Fin
-
-```
-* Se le consultó a la IA si ciertas variables propuestas eran necesarias y en base a su respuesta se descartaron unas y se modificaron otras, y además se le pidió una corrección en el control del bucle*
->>>>>>> 84cd4090201caf1a5dc468e8cbac5d0ae6bffa8a
